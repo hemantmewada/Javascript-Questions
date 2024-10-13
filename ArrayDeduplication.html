@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        let person = prompt("Please enter array values with ,");
+
+        if (person != null) {
+            const arr = person.split(",");
+            const newArr = arr.map((a) => {
+                return a.trim(" ");
+            })
+            const output = removedDup(newArr)
+            function removedDup(arr) {
+                let outputArr = [];
+                arr.forEach((a) => {
+                    if (!outputArr.includes(a)) {
+                        outputArr.push(a);
+                    }
+                });
+                return outputArr;
+            }
+            document.getElementById("demo").innerHTML =
+                "Hello " + output + "! How are you today?";
+        }
+    </script>
+</body>
+
+</html>
