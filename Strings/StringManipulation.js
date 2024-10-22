@@ -40,3 +40,4 @@ function isVowel(s) {
 
 console.log(removeAllVowels("dikshant"));
 console.log(removeAllVowels2("dikshant"));
+// changed something
